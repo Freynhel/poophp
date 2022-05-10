@@ -1,0 +1,63 @@
+Classe:	Exemplo: Caneta
+	Que coisas eu tenho? (Atributos)
+		Modelo
+		Cor
+		Ponta
+		Carga
+		Tampada
+			
+	Que coisas eu faço? (Métodos)
+		Escrever
+		Rabiscar
+		Pintar
+		Tampar
+		Destampar
+
+	Como eu estou agora? (Estado)
+		50% de Carga
+		Ponta fina
+		Destampada
+		Escreven
+
+Classe Caneta {
+	modelo: Caractere
+	cor: Caractere
+	ponta: Real
+	carga: Inteiro
+	tampada: Logico
+		Metodo rabiscar(){
+			if(tampada) {
+				echo 'ERRO';
+			} else {
+				echo 'Rabisco';
+			}
+		}
+		Metodo tampar(){
+			tampada = verdadeiro;
+		}
+}
+
+Instanciar
+C1 = new Caneta;
+C1.cor = "Azul";
+C1.ponta = 0.5;
+C1.tampada = false;
+C1.rabiscar();
+
+Classe Notebook {
+	modelo
+	processador
+	placadeVideo
+	ligado
+	mouseConectado
+}
+
+Classe rotinaManha {
+	cafe:
+	pastaDente:
+	roupa:
+
+	vestirRoupa()
+	tomarCafe()
+	escovarDentes()
+}
