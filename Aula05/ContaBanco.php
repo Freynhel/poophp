@@ -20,11 +20,11 @@
 		public function setNumConta($n) { $this->numConta = $n; }
 		public function setTipo($t) { $this->tipo = $t; }
 		public function setDono($d) { $this->dono = $d; }
-		public function setSaldo($s) { $this->saldo = $s;}
-		public function setStatus($stts) {$this->status = $stts;}
+		public function setSaldo($s) { $this->saldo = $s; }
+		public function setStatus($stts) {$this->status = $stts; }
 
 		public function abrirConta($t) {
-			switch ($t) {
+			switch ($t = strtoupper($t)) {
 				case 'CC':
 					$this->setTipo($t);
 					$this->setSaldo(50);
@@ -36,7 +36,6 @@
 								
 				default: echo 'Tipo de conta não reconhecido, insira CC ou CP'; break; 
 			}
-			
 		}
 		
 		public function fecharConta() {

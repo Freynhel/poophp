@@ -11,8 +11,8 @@
 	<pre>
 		<?php
 			require_once 'ContaBanco.php';
-			$c1 <-new ContaBanco();
-			$c1->abrirConta('Cs');
+			$c1 = new ContaBanco();
+			$c1->abrirConta('cp');
 			echo '<br><br>';
 			print_r($c1);
 		?>
