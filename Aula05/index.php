@@ -11,6 +11,10 @@
 	<pre>
 		<?php
 			require_once 'ContaBanco.php';
+			$c1 <-new ContaBanco();
+			$c1->abrirConta('Cs');
+			echo '<br><br>';
+			print_r($c1);
 		?>
 	</pre>
 
