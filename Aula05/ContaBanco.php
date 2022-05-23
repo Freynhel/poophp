@@ -39,18 +39,47 @@
 		}
 		
 		public function fecharConta() {
+			if ($this->getSaldo() > 0) {
+				echo "Conta ainda possui dinheiro";
 
+			} elseif ($this->getSaldo() < 0) {
+				echo "Conta em débito";
+
+			} else {
+				$this->setStatus(false);
+			}
 		}
 
-		public function depositar() {
-
+		public function depositar($dep) {
+			if ($this->getStatus()) {
+				$this->setSaldo($this->getSaldo() + $dep);
+			} else {
+				echo "Conta atualmente fechada";
+			}
 		}
 
-		public function sacar() {
-
+		public function sacar($sac) {
+			if ($this->getStatus() && $this->getSaldo() >= $sac) {
+				$this->setSaldo($this->getSaldo() - $sac);
+			}
 		}
 
 		public function pagarMensal() {
+			$mensal = 0;
+			switch ($this->getTipo()) {
+				case 'CC':
+					$mensal = 12;
+					break;
+				
+				case 'CP':
+					$mensal = 20;
+					break;
+			}
+
+			if ($this->getStatus() && $this->getSaldo() >= $mensal) {
+				$this->setSaldo($this->getSaldo() - $mensal);
+			}
+
 
 		}
 	}
